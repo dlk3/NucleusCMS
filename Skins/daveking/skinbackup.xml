@@ -1,0 +1,588 @@
+<nucleusskin>
+	<meta>
+		<skin name="daveking" />
+		<template name="daveking/full" />
+		<template name="daveking/short" />
+	</meta>
+
+
+	<skin name="daveking" type="text/html" includeMode="skindir" includePrefix="daveking/">
+		<description>Table-based version of the Kubrick skin</description>
+		<part name="archive"><![CDATA[<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%blogsetting(name)%></title>
+
+  <meta name="generator" content="<%version%>" />
+  <meta name="description" content="<%blogsetting(desc)%>" />
+
+  <link rel="stylesheet" type="text/css" href="<%skinfile(daveking.css)%>" />
+
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Expires" content="-1" />
+  
+</head>
+<body>
+
+<!-- New entry hot spot -->
+<div class="newitemhotspot"
+  onclick="window.location='<%blogsetting(url)%>nucleus/index.php?action=createitem&blogid=<%blogsetting(id)%>';">
+</div>
+
+<table class="maintable" border="0" cellspacing="0">
+  <tr>
+    <td rowspan=2 colspan=2>
+      <table class="pagetable">
+        <tr>
+          <td colspan="2">
+            <table border="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                  <h1><a href="<%blogsetting(url)%>"><%blogsetting(name)%></a></h1>
+                  <div class="description"><%blogsetting(desc)%></div>
+                </td>
+                <td class="header-right"></td>
+              </tr>
+            </table>
+          <td>
+        </tr>
+        <tr>
+          <td class="content">
+            <h2 class="pagetitle">Archive for <%archivedate(en,%B of %Y)%></h2>
+            <%archive(daveking/short)%>
+          </td>
+          <td class="sidebar">
+            <%Calendar%>
+            <br> 
+            <h2>Search</h2>
+            <%searchform%>
+            <h2>Links</h2>
+              <ul>
+                <li><a href="http://nucleuscms.org/" title="This site is Nucleus-powered" target="_blank">Nucleus</a></li>
+              </ul>
+            <a href="<%adminurl%>" title="Access administrative functions"><h2>Admin</h2></a>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer" colspan="2">
+            Powered by <a href="http://nucleuscms.org/"><%version%></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="shadow-corner" width="20px" height="30px"></td>
+  </tr>
+  <tr>
+    <td class="shadow" width="20px"></td>
+  </tr>
+  <tr>
+    <td class="shadow-corner" width="30px" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+  </tr>
+</table>
+
+</body>
+</html>]]></part>
+
+		<part name="error"><![CDATA[<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%sitevar(name)%></title>
+
+  <meta name="generator" content="<%version%>" />
+
+  <link rel="stylesheet" type="text/css" href="<%skinfile(daveking.css)%>" />
+
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Expires" content="-1" />
+</head>
+<body>
+
+<table class="maintable" border="0" cellspacing="0">
+  <tr>
+    <td rowspan=2 colspan=2>
+      <table class="pagetable">
+        <tr>
+          <td colspan="2">
+            <table border="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                  <h1><a href="<%sitevar(url)%>"><%sitevar(name)%></a></h1>
+                  <div class="description">Sorry, page not found</div>
+                </td>
+                <td class="header-right"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="content">
+            <h2>Error!</h2>
+            <p><%errormessage%></p>
+            <p><a href="javascript:history.go(-1);">Go back</a></p>
+          </td>
+          <td class="sidebar">
+            <h2>Search</h2>
+            <%searchform%>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer" colspan="2">
+            Powered by <a href="http://nucleuscms.org/"><%version%></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="shadow-corner" width="20px" height="30px"></td>
+  </tr>
+  <tr>
+    <td class="shadow" width="20px"></td>
+  </tr>
+  <tr>
+    <td class="shadow-corner" width="30px" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+  </tr>
+</table>
+
+</body>
+</html>]]></part>
+
+		<part name="imagepopup"><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+  <title><%imagetext%></title>
+  <style type="text/css">
+   img { border: none; }
+   body { margin: 0px; }
+  </style>
+</head>
+<body onblur="window.close()">
+  <a href="javascript:window.close();"><%image%></a>
+</body>
+</html>]]></part>
+
+		<part name="index"><![CDATA[<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%blogsetting(name)%></title>
+
+  <meta name="generator" content="<%version%>" />
+  <meta name="description" content="<%blogsetting(desc)%>" />
+
+  <link rel="stylesheet" type="text/css" href="<%skinfile(daveking.css)%>" />
+
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Expires" content="-1" />
+</head>
+<body>
+
+<!-- New entry hot spot -->
+<div class="newitemhotspot"
+  onclick="window.location='<%blogsetting(url)%>nucleus/index.php?action=createitem&blogid=<%blogsetting(id)%>';">
+</div>
+
+<table class="maintable" border="0" cellspacing="0">
+  <tr>
+    <td rowspan=2 colspan=2>
+      <table class="pagetable">
+        <tr>
+          <td colspan="2">
+            <table border="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                  <h1><%blogsetting(name)%></h1>
+                  <div class="description"><%blogsetting(desc)%></div>
+                </td>
+                <td class="header-right"></td>
+              </tr>
+            </table>
+          <td>
+        </tr>
+        <tr>
+          <td class="content">
+            <%blog(daveking/short,15)%>
+          </td>
+          <td class="sidebar">
+            <%Calendar%>
+            <br> 
+            <h2>Search</h2>
+            <%searchform%>
+            <h2>Links</h2>
+              <ul>
+                <li><a href="http://nucleuscms.org/" title="This site is Nucleus-powered" target="_blank">Nucleus</a></li>
+              </ul>
+            <a href="<%adminurl%>" title="Access administrative functions"><h2>Admin</h2></a>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer" colspan="2">
+            Powered by <a href="http://nucleuscms.org/"><%version%></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="shadow-corner" width="20px" height="30px"></td>
+  </tr>
+  <tr>
+    <td class="shadow" width="20px"></td>
+  </tr>
+  <tr>
+    <td class="shadow-corner" width="30px" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+  </tr>
+</table>
+
+</body>
+</html>]]></part>
+
+		<part name="item"><![CDATA[<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%itemtitle%> - <%blogsetting(name)%></title>
+
+  <meta name="generator" content="<%version%>" />
+  <meta name="description" content="<%blogsetting(desc)%>" />
+
+  <link rel="stylesheet" type="text/css" href="<%skinfile(daveking.css)%>" />
+
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Expires" content="-1" />
+</head>
+<body>
+
+<!-- New entry hot spot -->
+<div class="newitemhotspot"
+  onclick="window.location='<%blogsetting(url)%>nucleus/index.php?action=createitem&blogid=<%blogsetting(id)%>';">
+</div>
+
+<table class="maintable" border="0" cellspacing="0">
+  <tr>
+    <td rowspan=2 colspan=2>
+      <table class="pagetable">
+        <tr>
+          <td colspan="2">
+            <table border="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                  <h1><a href="<%blogsetting(url)%>"><%blogsetting(name)%></a></h1>
+                  <div class="description"><%blogsetting(desc)%></div>
+                </td>
+                <td class="header-right"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="content">
+            <%item(daveking/full)%>
+            <a name="comments"></a><h2>Comments</h2>
+            <%comments(daveking/full)%>
+            <h2>Add Comments</h2>
+            <%commentform%>
+          </td>
+          <td class="sidebar">
+            <%Calendar%>
+            <br> 
+            <h2>Search</h2>
+            <%searchform%>
+            <h2>Links</h2>
+            <ul>
+              <li><a href="http://nucleuscms.org/" title="This site is Nucleus-powered" target="_blank">Nucleus</a></li>
+            </ul>
+            <a href="<%adminurl%>" title="Access administrative functions"><h2>Admin</h2></a>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer" colspan="2">
+            Powered by <a href="http://nucleuscms.org/"><%version%></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="shadow-corner" width="20px" height="30px"></td>
+  </tr>
+  <tr>
+    <td class="shadow" width="20px"></td>
+  </tr>
+  <tr>
+    <td class="shadow-corner" width="30px" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+  </tr>
+</table>
+
+</body>
+</html>]]></part>
+
+		<part name="member"><![CDATA[<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%sitevar(name)%></title>
+
+  <meta name="generator" content="<%version%>" />
+
+  <link rel="stylesheet" type="text/css" href="<%skinfile(daveking.css)%>" />
+
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Expires" content="-1" />
+  
+</head>
+<body>
+
+<table class="maintable" border="0" cellspacing="0">
+  <tr>
+    <td rowspan=2 colspan=2>
+      <table class="pagetable">
+        <tr>
+          <td colspan="2">
+            <table border="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                  <h1><a href="<%blogsetting(url)%>"><%blogsetting(name)%></a></h1>
+                  <div class="description"><%blogsetting(desc)%></div>
+                </td>
+                <td class="header-right"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="content">
+            <h2 class="pagetitle">Member info for <%member(name)%></h2>
+            <p>Real name: <%member(realname)%></p>
+            <p>Website: <a href="<%member(url)%>"><%member(url)%></a></p>
+            <h2>Send Message</h2>
+            <%membermailform%>
+          </td>
+          <td class="sidebar">
+            <%Calendar%>
+            <br> 
+            <p><a href="javascript:history.go(-1);">Go back</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer" colspan="2">
+            Powered by <a href="http://nucleuscms.org/"><%version%></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="shadow-corner" width="20px" height="30px"></td>
+  </tr>
+  <tr>
+    <td class="shadow" width="20px"></td>
+  </tr>
+  <tr>
+    <td class="shadow-corner" width="30px" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+  </tr>
+</table>
+
+</body>
+</html>]]></part>
+
+		<part name="search"><![CDATA[<![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%blogsetting(name)%></title>
+
+  <meta name="generator" content="<%version%>" />
+  <meta name="description" content="<%blogsetting(desc)%>" />
+
+  <link rel="stylesheet" type="text/css" href="<%skinfile(daveking.css)%>" />
+  
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Expires" content="-1" />
+</head>
+<body>
+
+<table class="maintable" border="0" cellspacing="0">
+  <tr>
+    <td rowspan=2 colspan=2>
+      <table class="pagetable">
+        <tr>
+          <td colspan="2">
+            <table border="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="header-left"></td>
+                <td class="header-center">
+                  <h1><a href="<%blogsetting(url)%>"><%blogsetting(name)%></a></h1>
+                  <div class="description"><%blogsetting(desc)%></div>
+                </td>
+                <td class="header-right"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="content">
+            <h2 class="pagetitle">Search results</h2>
+            <%searchresults(daveking/short)%>
+          </td>
+          <td class="sidebar">
+            <p><a href="javascript:history.go(-1);">Go back</a></p>
+            <h2>Search</h2>
+            <%searchform%>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer" colspan="2">
+            Powered by <a href="http://nucleuscms.org/"><%version%></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="shadow-corner" width="20px" height="30px"></td>
+  </tr>
+  <tr>
+    <td class="shadow" width="20px"></td>
+  </tr>
+  <tr>
+    <td class="shadow-corner" width="30px" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+    <td class="shadow" height="20px"></td>
+  </tr>
+</table>
+
+</body>
+</html>]]></part>
+
+	</skin>
+
+
+	<template name="daveking/full">
+		<description>Template to display your items</description>
+		<part name="COMMENTS_BODY"><![CDATA[<h3 class="comment"><%userlink%> wrote:</h3>
+
+<div class="commentbody">
+  <%body%>
+</div>
+
+<div class="commentinfo">
+  <%date%> <%time%>
+</div>]]></part>
+
+		<part name="COMMENTS_MANY"><![CDATA[comments]]></part>
+
+		<part name="COMMENTS_NONE"><![CDATA[<div class="comments">No comments yet</div>]]></part>
+
+		<part name="COMMENTS_ONE"><![CDATA[comment]]></part>
+
+		<part name="EDITLINK"><![CDATA[- <a href="<%editlink%>" onclick="<%editpopupcode%>">edit</a>]]></part>
+
+		<part name="FORMAT_DATE"><![CDATA[%A %d %B]]></part>
+
+		<part name="FORMAT_TIME"><![CDATA[%H:%M]]></part>
+
+		<part name="IMAGE_CODE"><![CDATA[<%image%>]]></part>
+
+		<part name="ITEM"><![CDATA[<h2><%title%></h2>
+
+<div class="entry">
+  <%body%>
+  <p><%more%></p>
+</div>
+
+<p class="postmetadata">
+  Posted in <a href="<%categorylink%>"><%category%></a> 
+  at <%time%> on <%date%>
+  by <a href="?memberid=<%authorid%>"><%author%></a>
+  <%edit%>
+</p>
+]]></part>
+
+		<part name="LOCALE"><![CDATA[en]]></part>
+
+		<part name="MEDIA_CODE"><![CDATA[<%media%>]]></part>
+
+		<part name="POPUP_CODE"><![CDATA[<%popuplink%>]]></part>
+
+		<part name="SEARCH_HIGHLIGHT"><![CDATA[<span class="highlight">\0</span>]]></part>
+
+	</template>
+
+
+	<template name="daveking/short">
+		<description>Template to display your blog</description>
+		<part name="SEARCH_NOTHINGFOUND"><![CDATA[No search results found for <b><%query%></b>]]></part>
+
+		<part name="SEARCH_HIGHLIGHT"><![CDATA[<span class="highlight">\0</span>]]></part>
+
+		<part name="LOCALE"><![CDATA[en]]></part>
+
+		<part name="FORMAT_DATE"><![CDATA[%A, %B %d, %Y ]]></part>
+
+		<part name="FORMAT_TIME"><![CDATA[%X]]></part>
+
+		<part name="CATLIST_FOOTER"><![CDATA[</ul>]]></part>
+
+		<part name="CATLIST_LISTITEM"><![CDATA[ <li><a href="<%catlink%>"><%catname%></a></li>]]></part>
+
+		<part name="CATLIST_HEADER"><![CDATA[<ul><li><a href="<%blogurl%>">All</a></li>]]></part>
+
+		<part name="ARCHIVELIST_FOOTER"><![CDATA[</ul>]]></part>
+
+		<part name="ARCHIVELIST_HEADER"><![CDATA[<ul>]]></part>
+
+		<part name="ARCHIVELIST_LISTITEM"><![CDATA[<li><a href="<%archivelink%>">%B, %Y</a></li>]]></part>
+
+		<part name="COMMENTS_NONE"><![CDATA[<a href="<%itemlink%>" rel="bookmark">No <%commentword%> </a>]]></part>
+
+		<part name="COMMENTS_MANY"><![CDATA[comments]]></part>
+
+		<part name="COMMENTS_ONE"><![CDATA[comment]]></part>
+
+		<part name="EDITLINK"><![CDATA[ | <a href="<%editlink%>" onclick="<%editpopupcode%>">edit</a>]]></part>
+
+		<part name="COMMENTS_TOOMUCH"><![CDATA[<a href="<%itemlink%>#comments" rel="bookmark"><%commentcount%> <%commentword%> </a>]]></part>
+
+		<part name="MORELINK"><![CDATA[<a href="<%itemlink%>">Read more </a>]]></part>
+
+		<part name="ITEM"><![CDATA[<h2><a href="<%itemlink%>" rel="bookmark"><%title%></a></h2>
+<small><%date%></small>
+
+<div class="entry">
+  <%body%>
+  <p><%morelink%></p>
+</div>
+
+<p class="postmetadata">
+  Posted in <a href="<%categorylink%>"><%category%></a> 
+  <strong>|</strong> 
+  <%comments%>
+  <%edit%>
+</p>
+]]></part>
+
+		<part name="POPUP_CODE"><![CDATA[<%popuplink%>]]></part>
+
+		<part name="MEDIA_CODE"><![CDATA[<%media%>]]></part>
+
+		<part name="IMAGE_CODE"><![CDATA[<%image%>]]></part>
+
+	</template>
+
+
+</nucleusskin>
