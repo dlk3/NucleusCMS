@@ -1,0 +1,3 @@
+[submodule "NucleusCMS"]
+	path = NucleusCMS
+	url = git@github.com:NucleusCMS/NucleusCMS.git
